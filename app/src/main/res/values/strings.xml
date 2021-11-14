@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Grocery App</string>
+    <string name="empty_view_title_text">It\'s a bit lonely Here</string>
+    <string name="empty_view_subtitle_text">Get started by adding an Item</string>
+</resources>
