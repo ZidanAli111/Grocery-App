@@ -2,4 +2,10 @@
     <string name="app_name">Grocery App</string>
     <string name="empty_view_title_text">It\'s a bit lonely Here</string>
     <string name="empty_view_subtitle_text">Get started by adding an Item</string>
+    <string name="grade_unknown">Unknown</string>
+    <string name="grade_new">New</string>
+    <string name="grade_used">Used</string>
+    <string name="validation_msg_product_name">Product name is required</string>
+    <string name="validation_msg_product_quantity">Product quantity is required</string>
+    <string name="validation_msg_product_price">Product price is required</string>
 </resources>
