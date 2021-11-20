@@ -17,4 +17,22 @@
     <string name="cancel">cancel</string>
     <string name="editor_delete_product_failed">Error with deleting item</string>
     <string name="editor_delete_product_successful">Item deleted</string>
+    <string name="dummy_data_product_name">Alienware X17</string>
+    <string name="dummy_data_product_model">Cyro-Tech</string>
+    <string name="dummy_data_supplier_email">orders.storehouse@sony.com</string>
+    <string name="unsaved_changes_dialog_msg">Discard you changes?</string>
+    <string name="discard">Discard</string>
+    <string name="keep_editing">Keep Editing</string>
+    <string name="editor_activity_title_edit_product">Edit Product</string>
+    <string name="editor_activity_title_new_product">Add Product</string>
+    <string name="example_name_of_item">Sony</string>
+    <string name="example_price">1542</string>
+    <string name="example_model">XZ132L</string>
+    <string name="in_stock">In Stock</string>
+    <string name="example_quantity">9</string>
+    <string name="pcs_unit">pcs</string>
+    <string name="no_product_in_stock">"No available product in stock "</string>
+    <string name="error_msg_stock_update">Issue with upload value of quantity</string>
+    <string name="buy_msg_confirm">Item has been sold</string>
+    <string name="toast_out_of_stock_msg">Product is out of Stock</string>
 </resources>

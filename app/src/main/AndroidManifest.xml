@@ -29,7 +29,7 @@
         </activity>
         <provider
             android:name=".data.ProductProvider"
-            android:authorities="com.example.android.product"
+            android:authorities="com.example.product"
             android:exported="false"/>
     </application>
 

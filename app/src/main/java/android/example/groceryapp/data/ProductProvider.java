@@ -38,9 +38,8 @@ public class ProductProvider extends ContentProvider {
         return true;
     }
 
-    @Nullable
     @Override
-    public Cursor query(@NonNull Uri uri, @Nullable String[] projection, @Nullable String selection, @Nullable String[] selectionArgs, @Nullable String sortOrder) {
+    public Cursor query( Uri uri,  String[] projection, String selection,  String[] selectionArgs,  String sortOrder) {
 
 
         SQLiteDatabase sqLiteDatabase = productDbHelper.getReadableDatabase();
@@ -51,7 +50,8 @@ public class ProductProvider extends ContentProvider {
 
         switch (match) {
             case PRODUCTS:
-                cursor = sqLiteDatabase.query(ProductEntry.TABLE_NAME, projection, selection, selectionArgs, null, null, sortOrder);
+                cursor = sqLiteDatabase.query(ProductEntry.TABLE_NAME, projection,
+                        selection, selectionArgs, null, null, sortOrder);
                 break;
 
             case PRODUCT_ID:
@@ -59,7 +59,8 @@ public class ProductProvider extends ContentProvider {
                 selectionArgs = new String[]{
                         String.valueOf(ContentUris.parseId(uri))};
 
-                cursor = sqLiteDatabase.query(ProductEntry.TABLE_NAME, projection, selection, selectionArgs, null, null, sortOrder);
+                cursor = sqLiteDatabase.query(ProductEntry.TABLE_NAME, projection,
+                        selection, selectionArgs, null, null, sortOrder);
 
                 break;
             default:
@@ -133,7 +134,7 @@ public class ProductProvider extends ContentProvider {
     }
 
     @Override
-    public int delete(@NonNull Uri uri, @Nullable String selection, @Nullable String[] selectionArgs) {
+    public int delete(Uri uri, String selection,String[] selectionArgs) {
 
         SQLiteDatabase sqLiteDatabase = productDbHelper.getWritableDatabase();
 
@@ -168,7 +169,7 @@ public class ProductProvider extends ContentProvider {
     }
 
     @Override
-    public int update(@NonNull Uri uri, @Nullable ContentValues values, @Nullable String selection, @Nullable String[] selectionArgs) {
+    public int update( Uri uri, ContentValues values, String selection, String[] selectionArgs) {
 
         final int match = sUriMatcher.match(uri);
         switch (match) {
