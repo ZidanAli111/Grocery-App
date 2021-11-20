@@ -8,4 +8,13 @@
     <string name="validation_msg_product_name">Product name is required</string>
     <string name="validation_msg_product_quantity">Product quantity is required</string>
     <string name="validation_msg_product_price">Product price is required</string>
+    <string name="editor_insert_product_failed">Error with saving item</string>
+    <string name="editor_insert_product_successful">Item saved</string>
+    <string name="editor_update_product_failed">Error with updating item</string>
+    <string name="editor_update_product_successful">Item updated</string>
+    <string name="delete_dialog_msg">Delete this item?</string>
+    <string name="delete">delete</string>
+    <string name="cancel">cancel</string>
+    <string name="editor_delete_product_failed">Error with deleting item</string>
+    <string name="editor_delete_product_successful">Item deleted</string>
 </resources>

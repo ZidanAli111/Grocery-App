@@ -17,6 +17,9 @@ public class ProductProvider extends ContentProvider {
 
     private static final int PRODUCTS = 100;
     private static final int PRODUCT_ID = 101;
+
+    private ProductDbHelper productDbHelper;
+
     private static final UriMatcher sUriMatcher = new UriMatcher(UriMatcher.NO_MATCH);
 
     static {
@@ -26,7 +29,6 @@ public class ProductProvider extends ContentProvider {
         sUriMatcher.addURI(ProductContract.CONTENT_AUTHORITY, ProductContract.PATH_PRODUCT + "/#", PRODUCT_ID);
     }
 
-    private ProductDbHelper productDbHelper;
 
     @Override
     public boolean onCreate() {
@@ -39,7 +41,10 @@ public class ProductProvider extends ContentProvider {
     @Nullable
     @Override
     public Cursor query(@NonNull Uri uri, @Nullable String[] projection, @Nullable String selection, @Nullable String[] selectionArgs, @Nullable String sortOrder) {
+
+
         SQLiteDatabase sqLiteDatabase = productDbHelper.getReadableDatabase();
+
         Cursor cursor;
 
         int match = sUriMatcher.match(uri);
@@ -53,11 +58,14 @@ public class ProductProvider extends ContentProvider {
                 selection = ProductEntry._ID + "=?";
                 selectionArgs = new String[]{
                         String.valueOf(ContentUris.parseId(uri))};
+
                 cursor = sqLiteDatabase.query(ProductEntry.TABLE_NAME, projection, selection, selectionArgs, null, null, sortOrder);
+
                 break;
             default:
                 throw new IllegalArgumentException("Cannot query unknown URI:" + uri);
         }
+
         cursor.setNotificationUri(getContext().getContentResolver(), uri);
 
 
@@ -96,6 +104,7 @@ public class ProductProvider extends ContentProvider {
     }
 
     private Uri insertProduct(Uri uri, ContentValues values) {
+
         SQLiteDatabase sqLiteDatabase = productDbHelper.getWritableDatabase();
 
         String name = values.getAsString(ProductEntry.COLUMN_PRODUCT_NAME);
@@ -107,6 +116,7 @@ public class ProductProvider extends ContentProvider {
         if (grade == null || !ProductEntry.isValidGrade(grade)) {
             throw new IllegalArgumentException("Product requires valid grade");
         }
+
         Integer quantity = values.getAsInteger(ProductEntry.COLUMN_PRODUCT_QUANTITY);
         if (quantity != null && quantity < 0) {
             throw new IllegalArgumentException("Product requires valid quantity");

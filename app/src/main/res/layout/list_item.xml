@@ -2,27 +2,27 @@
 
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:minHeight="100dp"
-    android:padding="16dp"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="horizontal">
+    android:orientation="horizontal"
+    android:padding="16dp">
 
     <ImageView
-        android:layout_width="0dp"
         android:id="@+id/product_image"
-        android:layout_weight="1"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_weight="1"
         android:scaleType="fitCenter"
         android:src="@drawable/ic_launcher_background" />
 
     <LinearLayout
         android:layout_width="0dp"
-        android:layout_weight="3"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="16dp"
+        android:layout_weight="3"
         android:orientation="vertical">
 
         <LinearLayout
@@ -31,52 +31,53 @@
             android:layout_marginBottom="4dp"
             android:orientation="horizontal">
 
-        <TextView
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:fontFamily="sans-serif-condensed-medium"
-            android:textAppearance="?android:textAppearanceMedium"
-            android:paddingLeft="8dp"
-            android:id="@+id/product_name"
-            android:paddingTop="8dp"
-            tools:text="Realme X"/>
+            <TextView
+                android:id="@+id/product_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:paddingLeft="8dp"
+                android:paddingTop="8dp"
+                android:textAppearance="?android:textAppearanceMedium"
+                tools:text="Realme X" />
 
             <TextView
+                android:id="@+id/product_price"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-condensed-medium"
                 android:numeric="decimal"
                 android:paddingLeft="8dp"
-                android:id="@+id/product_price"
                 android:paddingTop="8dp"
                 android:textAppearance="?android:textAppearanceMedium"
                 tools:ignore="TouchTargetSizeCheck"
                 tools:text="200.00" />
+
             <TextView
-                android:numeric="decimal"
                 android:id="@+id/currency_sign"
-                android:textStyle="bold"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="4dp"
                 android:fontFamily="sans-serif"
+                android:numeric="decimal"
+                android:text="Rs"
                 android:textAppearance="?android:textAppearanceSmall"
                 android:textColor="@color/colorAccent"
-               android:text="Rs" />
+                android:textStyle="bold" />
 
         </LinearLayout>
 
 
         <TextView
+            android:id="@+id/product_model"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-condensed-medium"
-            android:textAppearance="?android:textAppearanceMedium"
-            tools:text="Realme Indain pvt."
             android:paddingLeft="8dp"
-            android:id="@+id/product_model"
-            android:paddingTop="8dp"/>
+            android:paddingTop="8dp"
+            android:textAppearance="?android:textAppearanceMedium"
+            tools:text="Realme Indain pvt." />
 
 
         <LinearLayout
@@ -85,21 +86,21 @@
             android:layout_marginTop="8dp"
             android:orientation="horizontal">
 
-        <TextView
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:text="In Stock :"
-            android:paddingLeft="8dp"
-            android:paddingTop="8dp"
-            android:fontFamily="sans-serif-condensed-medium"
-            android:textAppearance="?android:textAppearanceMedium"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:paddingLeft="8dp"
+                android:paddingTop="8dp"
+                android:text="In Stock :"
+                android:textAppearance="?android:textAppearanceMedium" />
 
             <TextView
                 android:id="@+id/product_current_quantity"
-                android:layout_marginRight="4dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginRight="4dp"
                 android:fontFamily="sans-serif"
 
                 android:textAppearance="?android:textAppearanceSmall"
@@ -111,9 +112,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif"
+                android:text="pcs"
                 android:textAppearance="?android:textAppearanceSmall"
-                android:textColor="#AEB6BD"
-                android:text="pcs" />
+                android:textColor="#AEB6BD" />
         </LinearLayout>
 
     </LinearLayout>
@@ -128,4 +129,4 @@
         android:textColor="@android:color/white"
         tools:ignore="SpeakableTextPresentCheck" />
 
-    </LinearLayout>
+</LinearLayout>

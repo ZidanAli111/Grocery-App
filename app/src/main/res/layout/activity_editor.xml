@@ -33,7 +33,7 @@
 
 
             <EditText
-                android:id="@+id/p_name"
+                android:id="@+id/edit_p_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-light"
@@ -41,7 +41,7 @@
                 android:textAppearance="?android:textAppearanceMedium" />
 
             <EditText
-                android:id="@+id/p_model"
+                android:id="@+id/edit_p_model"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-light"
@@ -49,10 +49,10 @@
                 android:textAppearance="?android:textAppearanceMedium" />
 
             <EditText
+                android:id="@+id/edit_p_price"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-light"
-                android:id="@+id/p_price"
                 android:hint="Price"
                 android:inputType="number"
                 android:textAppearance="?android:textAppearanceMedium" />
@@ -62,7 +62,7 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/container_gender"
+        android:id="@+id/edit_container_gender"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -72,18 +72,18 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
             android:fontFamily="sans-serif-condensed-medium"
             android:paddingRight="20dp"
             android:text="Product :\nGrade"
             android:textColor="#FF0000"
             android:textSize="20sp"
-            android:layout_marginBottom="12dp"
             android:textStyle="normal" />
 
 
         <!-- Gender drop-down spinner -->
         <Spinner
-            android:id="@+id/spinner_gender"
+            android:id="@+id/edit_spinner_gender"
             android:layout_width="wrap_content"
             android:layout_height="48dp"
             android:paddingRight="16dp"
@@ -109,7 +109,7 @@
             android:textStyle="normal" />
 
         <EditText
-            android:id="@+id/s_id"
+            android:id="@+id/edit_s_id"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="2"
@@ -136,7 +136,7 @@
             android:textStyle="normal" />
 
         <EditText
-            android:id="@+id/p_quantity"
+            android:id="@+id/edit_p_quantity"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="2"
@@ -167,7 +167,6 @@
             android:text="Add Product"
             android:textColor="@android:color/white" />
     </LinearLayout>
-
 
 
 </LinearLayout>

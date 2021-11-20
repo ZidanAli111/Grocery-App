@@ -19,6 +19,8 @@ public class ProductContract {
 
     public static final String PATH_PRODUCT = "products";
 
+
+
     public static abstract class ProductEntry implements BaseColumns {
 
 
@@ -47,7 +49,7 @@ public class ProductContract {
 
         public static final String COLUMN_PRODUCT_PRICE = "price";
 
-        public static final String COLUMN_SUPPLER_ID = "SupplierId";
+        public static final String COLUMN_SUPPLIER_ID = "SupplierId";
 
 
         public static final int GRADE_UNKNOWN = 0;

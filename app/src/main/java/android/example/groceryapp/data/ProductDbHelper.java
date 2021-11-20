@@ -27,7 +27,7 @@ public class ProductDbHelper extends SQLiteOpenHelper {
                 ProductEntry.COLUMN_PRODUCT_MODEL+" TEXT, "+
                 ProductEntry.COLUMN_PRODUCT_GRADE+" INTEGER NOT NULL, "+
                 ProductEntry.COLUMN_PRODUCT_PRICE+" REAL NOT NULL, "+
-                ProductEntry.COLUMN_SUPPLER_ID+" TEXT NOT NULL, "+
+                ProductEntry.COLUMN_SUPPLIER_ID+" TEXT NOT NULL, "+
                 ProductEntry.COLUMN_PRODUCT_QUANTITY+" INTEGER DEFAULT 0);";
 
         Log.v("SIGMA",SQL_CREATE_PRODUCTS_TABLE);
